@@ -48,7 +48,7 @@ Installation
 ------------
 
 ```sh
-$ npm install [-g] mrcs
+$ npm install [-g] @rse/mrcs
 ```
 
 Usage
@@ -114,7 +114,7 @@ TypeScript/JavaScript API, which knows only the color ramp itself and
 neither the name nor the prefix of a color:
 
 ```ts
-import { parse, format, generate } from "mrcs"
+import { parse, format, generate } from "@rse/mrcs"
 
 /*  parse a color ramp specification (resolving all defaults)  */
 const spec = parse("#3366cc")
