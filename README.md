@@ -5,7 +5,7 @@ MRCS
 **Multi-Ramp Coloring Scheme**
 
 <p/>
-<img src="https://nodei.co/npm/rse/mrcs.png?downloads=true&stars=true" alt=""/>
+<img src="https://nodei.co/npm/@rse/mrcs.png?downloads=true&stars=true" alt=""/>
 
 Abstract
 --------
