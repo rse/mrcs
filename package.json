@@ -1,6 +1,6 @@
 {
     "name":                                 "@rse/mrcs",
-    "version":                              "0.9.1",
+    "version":                              "0.9.2",
     "publishConfig":                        { "access": "public" },
     "homepage":                             "https://github.com/rse/mrcs",
     "description":                          "Multi-Ramp Coloring Scheme (MRCS)",
