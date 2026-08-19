@@ -10,17 +10,17 @@ MRCS
 Abstract
 --------
 
-**MRCS** (Multi-Ramp Coloring Scheme) is a simple and minimalistic color scheme
-generator, designed by Dr. Ralf S. Engelschall. It expands a few base
-colors into full color ramps for use in applications, websites, diagrams,
-etc.
+**MRCS** (Multi-Ramp Coloring Scheme) is a simple and minimalistic color
+scheme generator, designed by Dr. Ralf S. Engelschall. It expands a few
+base colors into full color ramps for use in applications, websites,
+diagrams, etc.
 
 **MRCS** is based on the following foundational rules:
 
 1. *Tone Preservation*:
-   A base color is converted into the perceptually uniform **OKLCH**
-   color space, where its chroma (C) and hue (H) are the *tone* of the
-   color and are kept fixed for the entire ramp.
+   A base (usually **RGB**) color is converted into the perceptually
+   uniform **OKLCH** color space, where its chroma (C) and hue (H) are
+   the *tone* of the color and are kept fixed for the entire ramp.
 
 2. *Lightness Sweep*:
    Only the lightness (L) of **OKLCH** is swept, in equal steps, between
@@ -41,7 +41,7 @@ etc.
 
 5. *Gamut Mapping*:
    As a fixed chroma is not reachable at every lightness, the chroma is
-   reduced just enough to re-enter the sRGB gamut, which leaves the
+   reduced just enough to re-enter the **sRGB** gamut, which leaves the
    lightness and the hue of a color untouched.
 
 Installation
@@ -54,8 +54,9 @@ $ npm install [-g] @rse/mrcs
 Usage
 -----
 
-**MRCS** can be used from the command-line via its CLI. Specify one or
-more color ramp specifications of the format
+**MRCS** can be used from the command-line via its CLI.
+
+Specify one or more color ramp specifications of the format
 `<name>:<rgb>[^][+<floor>][-<ceiling>][/<count>]`, where `<rgb>` is any
 CSS color notation -- the short hex `#rgb`, the long hex `#rrggbb`, a
 color name like `cornflowerblue`, or a functional notation like
@@ -63,9 +64,10 @@ color name like `cornflowerblue`, or a functional notation like
 `^` transposes the base color into its complement, `<floor>` is the
 lower lightness bound in percent, `<ceiling>` is the *inset below white*
 of the upper lightness bound in percent, and `<count>` is the number of
-colors (default: 9). Choose an
-output format (`css`, `root`, `json`, `yaml`, or `url`) and an optional
-CSS variable name prefix:
+colors (default: 9).
+
+Choose an output format (`css`, `root`, `json`, `yaml`, or `url`) and an
+optional CSS variable name prefix:
 
 ```sh
 $ mrcs --prefix mrcs --format root "grey:#808080/5" "blue:#3366cc/5"
